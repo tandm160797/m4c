@@ -1,0 +1,35 @@
+{
+	"name": "@biso24/react-template",
+	"version": "1.0.0",
+	"private": true,
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"scripts": {
+		"dev": "vite",
+		"preview": "vite preview",
+		"build": "vite build",
+		"lint": "eslint --fix \"*.{js,ts,jsx,tsx}\"",
+		"pretty": "prettier --write \"*.{js,ts,jsx,tsx}\""
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,ts,jsx,tsx}": [
+			"yarn lint",
+			"yarn pretty"
+		]
+	}
+}

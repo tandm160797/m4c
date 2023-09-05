@@ -1,9 +1,9 @@
 import { createStyles } from 'antd-style';
 
-const useStyles = createStyles(({ token, responsive }) => ({
+const useStyles = createStyles({
 	cursorPointer: {
 		cursor: 'pointer'
 	}
-}));
+});
 
 export default useStyles;

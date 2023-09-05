@@ -14,6 +14,12 @@ importers:
       '@biso24/constants':
         specifier: workspace:^
         version: link:packages/shared/constants
+      '@biso24/features':
+        specifier: workspace:^
+        version: link:packages/shared/features
+      '@biso24/hooks':
+        specifier: workspace:^
+        version: link:packages/shared/hooks
       '@biso24/theme':
         specifier: workspace:^
         version: link:packages/shared/theme
@@ -129,6 +135,10 @@ importers:
   packages/shared/components: {}
 
   packages/shared/constants: {}
+
+  packages/shared/features: {}
+
+  packages/shared/hooks: {}
 
   packages/shared/theme: {}
 

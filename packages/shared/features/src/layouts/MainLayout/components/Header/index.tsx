@@ -1,6 +1,6 @@
 import { Layout } from 'antd';
 
-import { useMainLayoutStore } from '../../hooks';
+import { useMainLayoutStore } from '@biso24/features';
 import useStyles from './styles';
 
 export const Header = () => {

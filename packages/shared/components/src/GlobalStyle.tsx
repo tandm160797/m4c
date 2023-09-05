@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'antd-style';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
   }
@@ -76,5 +76,3 @@ const GlobalStyle = createGlobalStyle`
     background-color:  ${globalTheme => globalTheme.theme.scrollbar.scrollbarButtonHoverColor}; 
   }
 `;
-
-export default GlobalStyle;

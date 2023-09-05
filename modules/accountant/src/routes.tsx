@@ -1,33 +1,41 @@
-import { MainLayout } from '@biso24/components';
+import { type RouteObject } from 'react-router-dom';
 
-const adminRoutes: any[] = [];
+import { moduleRoutePath } from '@biso24/constants';
+import { MainLayout } from '@biso24/features';
+import Welcome from '@components/Welcome';
 
-const publicRoutes: any[] = [
+export const routePath = {
+	...moduleRoutePath
+};
+
+const permissionRoutes: RouteObject[] = [
 	{
-		path: '/',
+		path: routePath.home,
 		element: <MainLayout />,
 		children: [
 			{
 				index: true,
-				element: <div>Content</div>
+				element: <Welcome />
 			}
 		]
-	},
+	}
+];
 
+const publicRoutes: RouteObject[] = [
 	{
-		path: '/login',
+		path: routePath.login,
 		element: <h1>Login page</h1>
 	}
 ];
 
-const routes = (role?: string) => {
-	switch (role) {
-		case 'Admin':
-			return [...adminRoutes, ...publicRoutes];
+export const getRoutesByPermission = (permission: string): RouteObject[] => {
+	switch (permission) {
+		case '*': {
+			return [...permissionRoutes, ...publicRoutes];
+		}
 
-		default:
+		default: {
 			return publicRoutes;
+		}
 	}
 };
-
-export default routes;

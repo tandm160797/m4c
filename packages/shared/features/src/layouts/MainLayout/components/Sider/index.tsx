@@ -2,12 +2,11 @@ import { Layout, Menu } from 'antd';
 import { type MenuItemType } from 'antd/es/menu/hooks/useItems';
 import { useState, type Key, type ReactNode } from 'react';
 
+import { Icon, Image } from '@biso24/components';
 import { type Modules } from '@biso24/constants';
+import { useMainLayoutStore } from '@biso24/features';
 import { mainLayout } from '@biso24/theme';
 import { getModuleName } from '@biso24/utils';
-import { Icon } from '../../../Icon';
-import Image from '../../../Image';
-import { useMainLayoutStore } from '../../hooks';
 import { Content } from '../Content';
 import useStyles from './styles';
 

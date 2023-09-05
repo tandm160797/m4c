@@ -1,7 +1,7 @@
 import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
 
-import { useMainLayoutStore } from '../../hooks';
+import { useMainLayoutStore } from '@biso24/features';
 import useStyles from './styles';
 
 export const Content = () => {

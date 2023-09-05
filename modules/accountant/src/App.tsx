@@ -1,9 +1,10 @@
 import { useRoutes } from 'react-router-dom';
 
-import routes from 'routes';
+import { getRoutesByPermission } from 'routes';
 
 const App = () => {
-	const routing = useRoutes(routes());
+	const routing = useRoutes(getRoutesByPermission('*'));
 	return routing;
 };
+
 export default App;

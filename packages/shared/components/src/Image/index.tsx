@@ -11,7 +11,7 @@ export interface ImageProps {
 	fill?: string;
 }
 
-const Image = ({ image, className = '', fill, ...restProps }: ImageProps): JSX.Element =>
+export const Image = ({ image, className = '', fill, ...restProps }: ImageProps) =>
 	cloneElement(imageSet[image], {
 		className: cx({
 			[className]: !!className
@@ -19,5 +19,3 @@ const Image = ({ image, className = '', fill, ...restProps }: ImageProps): JSX.E
 		fill: fill ?? 'inherit',
 		...restProps
 	});
-
-export default Image;

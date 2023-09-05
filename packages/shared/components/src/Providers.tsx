@@ -7,9 +7,9 @@ import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
+import { GlobalStyle } from '@biso24/components';
 import { type Modules } from '@biso24/constants';
 import { customToken, theme } from '@biso24/theme';
-import GlobalStyle from './GlobalStyle';
 
 const staleTime = 20000;
 

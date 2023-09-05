@@ -1,4 +1,5 @@
 import IcoMoon, { type IconProps as IconPropsBase } from 'react-icomoon';
+
 import iconSet from './selection.json';
 import useStyles from './styles';
 

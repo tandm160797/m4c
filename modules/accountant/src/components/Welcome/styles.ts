@@ -5,7 +5,7 @@ const useStyles = createStyles(({ token, responsive }) => ({
 
 	testCSS: {
 		background: token.colorPrimary,
-		color: token.cssVars.color.yellow
+		color: token.cssVars.color.white
 	},
 
 	div: {

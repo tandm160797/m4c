@@ -4,6 +4,8 @@
 	"dependencies": {
 		"@biso24/components": "workspace:^",
 		"@biso24/constants": "workspace:^",
+		"@biso24/features": "workspace:^",
+		"@biso24/hooks": "workspace:^",
 		"@biso24/theme": "workspace:^",
 		"@biso24/utils": "workspace:^",
 		"@tanstack/react-query": "^4.33.0",

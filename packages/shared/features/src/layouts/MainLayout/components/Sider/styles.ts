@@ -99,8 +99,7 @@ const useStyles = createStyles(({ token }) => ({
 			top: '50%',
 			right: -10,
 			position: 'absolute'
-		},
-		expanedIcon: {}
+		}
 	}
 }));
 

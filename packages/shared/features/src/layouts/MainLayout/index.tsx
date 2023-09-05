@@ -1,13 +1,17 @@
 import { Layout } from 'antd';
 import { useEffect, useState } from 'react';
-
 import { useNavigate } from 'react-router-dom';
+
+import { moduleRoutePath } from '@biso24/constants';
 import { Header } from './components/Header';
 import { MainLayoutSkeleton } from './components/MainLayoutSkeleton';
 import { Sider } from './components/Sider';
 import useStyles from './styles';
 
-export const MainLayout = (): JSX.Element => {
+export * from './constants';
+export * from './hooks';
+
+export const MainLayout = () => {
 	const navigate = useNavigate();
 
 	const [user] = useState(true);
@@ -16,16 +20,16 @@ export const MainLayout = (): JSX.Element => {
 
 	useEffect(() => {
 		if (!user) {
-			navigate('/login');
+			navigate(moduleRoutePath.login);
 		}
 	}, [user]);
 
-	const [loading, setLoading] = useState<boolean>(true);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false);
-		}, 5000);
+		}, 3000);
 	}, []);
 
 	return loading ? (

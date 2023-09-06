@@ -41,14 +41,14 @@
 		"standard-prettier": "workspace:^",
 		"tsconfig": "workspace:^",
 		"turbo": "latest",
-		"typescript": "^5.2.2",
+		"typescript": "^4.9.5",
 		"vite": "^4.4.9",
 		"vite-plugin-svgr": "^3.2.0"
 	},
 	"scripts": {
 		"prepare": "husky install",
-		"lint": "eslint --fix \"*.{js,jsx,ts,tsx}\"",
-		"pretty": "prettier --write \"*.{js,jsx,ts,tsx}\"",
+		"lint": "eslint --fix \"packages/shared/**/*.{js,jsx,ts,tsx}\"",
+		"pretty": "prettier --write \"packages/shared/**/*.{js,jsx,ts,tsx}\"",
 		"dev": "turbo dev --filter=\"./packages/shared/*\""
 	},
 	"husky": {

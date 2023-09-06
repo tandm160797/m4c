@@ -47,9 +47,8 @@
 	},
 	"scripts": {
 		"prepare": "husky install",
-		"lint": "eslint --fix \"packages/shared/**/*.{js,jsx,ts,tsx}\"",
-		"pretty": "prettier --write \"packages/shared/**/*.{js,jsx,ts,tsx}\"",
-		"dev": "turbo dev --filter=\"./packages/shared/*\""
+		"lint": "eslint --fix",
+		"pretty": "prettier --write"
 	},
 	"husky": {
 		"hooks": {

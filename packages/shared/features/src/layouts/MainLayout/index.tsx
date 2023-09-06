@@ -32,6 +32,8 @@ export const MainLayout = () => {
 		}, 3000);
 	}, []);
 
+	console.log('Main layout');
+
 	return loading ? (
 		<MainLayoutSkeleton />
 	) : (

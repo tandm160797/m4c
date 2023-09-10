@@ -1,8 +1,11 @@
 import { type RouteObject } from 'react-router-dom';
 
-import { moduleRoutePath } from '@biso24/constants';
-import { MainLayout } from '@biso24/features';
+import { moduleRoutePath } from '@biso24/constants/modules';
+import AuthFeature, { LoginPage } from '@biso24/features/Auth';
+import MainLayout from '@biso24/features/layouts/MainLayout';
+
 import Welcome from '@components/Welcome';
+import { authService } from '@services';
 
 export const routePath = {
 	...moduleRoutePath,
@@ -24,7 +27,11 @@ const permissionRoutes: RouteObject[] = [
 const publicRoutes: RouteObject[] = [
 	{
 		path: routePath.login,
-		element: <h1>Login page</h1>,
+		element: (
+			<AuthFeature authService={authService}>
+				<LoginPage />
+			</AuthFeature>
+		),
 	},
 ];
 

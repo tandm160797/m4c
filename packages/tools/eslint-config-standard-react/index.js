@@ -22,6 +22,7 @@ module.exports = {
 		'@typescript-eslint/strict-null-checks': 'off',
 		'@typescript-eslint/no-misused-promises': 'off',
 		'@typescript-eslint/interface-name-prefix': 'off',
+		'@typescript-eslint/no-non-null-assertion': 'off',
 		'@typescript-eslint/restrict-plus-operands': 'off',
 		'@typescript-eslint/prefer-nullish-coalescing': 'off',
 		'@typescript-eslint/strict-boolean-expressions': 'off',

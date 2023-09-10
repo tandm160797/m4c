@@ -30,6 +30,16 @@ const viteConfig: UserConfig = defineConfig({
 				find: '@components',
 				replacement: resolve(__dirname, 'src/components'),
 			},
+
+			{
+				find: '@pages',
+				replacement: resolve(__dirname, 'src/pages'),
+			},
+
+			{
+				find: '@services',
+				replacement: resolve(__dirname, 'src/services'),
+			},
 		],
 	},
 

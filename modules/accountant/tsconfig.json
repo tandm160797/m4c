@@ -7,7 +7,13 @@
 			"routes": ["routes"],
 
 			"@components": ["components"],
-			"@components/*": ["components/*"]
+			"@components/*": ["components/*"],
+
+			"@pages": ["pages"],
+			"@pages/*": ["pages/*"],
+
+			"@services": ["services"],
+			"@services/*": ["services/*"]
 		}
 	},
 	"include": ["src/**/*", "vite.config.ts", "../../packages/shared/types/**/*"]

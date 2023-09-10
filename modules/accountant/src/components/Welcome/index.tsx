@@ -2,8 +2,10 @@ import { Button } from 'antd';
 import { type FC } from 'react';
 import { toast } from 'react-toastify';
 
-import { useQueryString } from '@biso24/hooks';
+import useQueryString from '@biso24/hooks/useQueryString';
 import useStyles from '@components/Welcome/styles';
+import { axiosClient } from '@services';
+import { useQuery } from '@tanstack/react-query';
 
 const Welcome: FC = (): JSX.Element => {
 	const { styles, cx } = useStyles();
@@ -11,6 +13,18 @@ const Welcome: FC = (): JSX.Element => {
 	const [planYear] = useQueryString('planYear', new Date().getFullYear());
 	const [abc, setAbc] = useQueryString('abc', new Date().getFullYear());
 	const [abc2, setAbc2] = useQueryString('abc', new Date().getFullYear() + 100);
+
+	useQuery({
+		initialData: null,
+		queryKey: ['1'],
+		queryFn: async () => {
+			const data = await axiosClient.get('https://jsonplaceholder.typicode.com/todos/1');
+
+			console.log(data);
+
+			return 123;
+		},
+	});
 
 	return (
 		<div>

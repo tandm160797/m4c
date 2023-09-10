@@ -1,25 +1,15 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"display": "Base",
+	"display": "TS config base",
 	"compilerOptions": {
-		"composite": false,
-		"declaration": true,
-		"declarationMap": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"forceConsistentCasingInFileNames": true,
-		"inlineSources": false,
-		"isolatedModules": true,
-		"moduleResolution": "node",
-		"noUnusedLocals": false,
-		"noUnusedParameters": false,
-		"preserveWatchOutput": true,
-		"skipLibCheck": true,
+		"target": "ES2020",
+		"module": "CommonJS",
 		"strict": true,
-		"allowJs": true,
-		"noFallthroughCasesInSwitch": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"sourceMap": true,
 		"resolveJsonModule": true,
-		"noEmit": true
-	},
-	"exclude": ["node_modules"]
+		"declaration": true
+	}
 }
